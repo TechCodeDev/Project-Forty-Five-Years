@@ -44,29 +44,29 @@
   });
   function Sample()
   {
-  var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
+      var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
        //var first='1/1/2020';  
        var second='1/2/2025'; 
        first = new Date();
        second = new Date(second);
-        $('#Year').remove();
-       $('#Month').remove();
-       $('#Days').remove();
-       $('#Weeks').remove();
-       $('#Hours').remove();
-       $('#Minutes').remove();
-       $('#Seconds').remove();
-       $('#MiliSeconds').remove();
+        $('#IdYEAR').remove();
+       $('#Idmonth').remove();
+       $('#Iddays').remove();
+       $('#Idweeks').remove();
+       $('#Idhours').remove();
+       $('#Idminutes').remove();
+       $('#Iddiff_seconds').remove();
+       $('#Iddiff_miliseconds').remove();
        
        var timediff = second - first;
-       $('#Year').append(year(first,second));
-       $('#Month').append(month(first,second));
-       $('#Days').append(days(timediff,day));
-       $('#Weeks').append(weeks(timediff,week));
-       $('#Hours').append(hours(timediff,hour));
-       $("#Minutes").append(minutes(timediff,minute));
-       $("#Seconds").append(diff_seconds(first,second));
-       $("#MiliSeconds").append(diff_miliseconds(first,second));
+       $('#Year').append("<span id=IdYEAR>"+year(first,second)+"</span>");
+       $('#Month').append("<span id=Idmonth>"+month(first,second)+"</span>");
+       $('#Days').append("<span id=Iddays>"+days(timediff,day)+"</span>");
+       $('#Weeks').append("<span id=Idweeks>"+weeks(timediff,week)+"</span>");
+       $('#Hours').append("<span id=Idhours>"+hours(timediff,hour)+"</span>");
+       $("#Minutes").append("<span id=Idminutes>"+minutes(timediff,minute)+"</span>");
+       $("#Seconds").append("<span id=Iddiff_seconds>"+diff_seconds(first,second)+"</span>");
+       $("#MiliSeconds").append("<span id=Iddiff_miliseconds>"+diff_miliseconds(first,second)+"</span>");
   }
     function year(date1,date2)
     {
