@@ -49,6 +49,15 @@
        var second='1/2/2025'; 
        first = new Date();
        second = new Date(second);
+        $('#Year').remove();
+       $('#Month').remove();
+       $('#Days').remove();
+       $('#Weeks').remove();
+       $('#Hours').remove();
+       $('#Minutes').remove();
+       $('#Seconds').remove();
+       $('#MiliSeconds').remove();
+       
        var timediff = second - first;
        $('#Year').append(year(first,second));
        $('#Month').append(month(first,second));
