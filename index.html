@@ -3,7 +3,7 @@
 <head>
   <title>Project Forty Five Years Plane</title>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="10">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,11 +36,17 @@
     }
 </style>
 <script>
-  $("document").ready(function(){
+  $("document").ready(function()
+  {
     
-       var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
+       setInterval(Sample, 1000);
+        
+  });
+  function Sample()
+  {
+  var second=1000, minute=second*60, hour=minute*60, day=hour*24, week=day*7;
        //var first='1/1/2020';  
-       var second='1/2/2043'; 
+       var second='1/2/2025'; 
        first = new Date();
        second = new Date(second);
        var timediff = second - first;
@@ -52,7 +58,7 @@
        $("#Minutes").append(minutes(timediff,minute));
        $("#Seconds").append(diff_seconds(first,second));
        $("#MiliSeconds").append(diff_miliseconds(first,second));
-        
+  }
     function year(date1,date2)
     {
         
@@ -102,11 +108,6 @@
       var diff =(dt2.getTime() - dt1.getTime());
       return Math.abs(Math.round(diff));
     }
-
-
-
-  });
-    
 </script>
 <body >
   
